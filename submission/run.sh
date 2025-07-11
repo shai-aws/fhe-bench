@@ -2,6 +2,7 @@
 set -e
 DIR=$(dirname "$0")
 cd "$DIR"
+echo "$DIR"
 
 # clean + recreate IO dir relative to workload
 rm -rf ../io && mkdir ../io

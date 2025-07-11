@@ -61,26 +61,26 @@ endif()
 #     The eight stage names are hard-wired by the benchmark contract.
 # --------------------------------------------------------------------
  
-add_executable( client_key_generation client_key_generation.cpp )
+add_executable( client_key_generation src/client_key_generation.cpp )
 target_include_directories(client_key_generation PRIVATE include)
 
-add_executable( client_preprocess client_preprocess.cpp )
+add_executable( client_preprocess src/client_preprocess.cpp )
 target_include_directories(client_preprocess PRIVATE include)
 
-add_executable( client_encode_encrypt_db client_encode_encrypt_db.cpp )
+add_executable( client_encode_encrypt_db src/client_encode_encrypt_db.cpp )
 target_include_directories(client_encode_encrypt_db PRIVATE include)
 
-add_executable( client_encode_encrypt_query client_encode_encrypt_query.cpp )
+add_executable( client_encode_encrypt_query src/client_encode_encrypt_query.cpp )
 target_include_directories(client_encode_encrypt_query PRIVATE include)
 
-add_executable( client_decode_decrypt client_decode_decrypt.cpp )
+add_executable( client_decode_decrypt src/client_decode_decrypt.cpp )
 target_include_directories(client_decode_decrypt PRIVATE include)
 
-add_executable( client_postprocess client_postprocess.cpp )
+add_executable( client_postprocess src/client_postprocess.cpp )
 target_include_directories(client_postprocess PRIVATE include)
 
-add_executable( server_preprocess server_preprocess.cpp )
+add_executable( server_preprocess src/server_preprocess.cpp )
 target_include_directories(server_preprocess PRIVATE include)
 
-add_executable( server_encrypted_compute server_encrypted_compute.cpp )
+add_executable( server_encrypted_compute src/server_encrypted_compute.cpp )
 target_include_directories(server_encrypted_compute PRIVATE include)

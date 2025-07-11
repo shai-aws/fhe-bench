@@ -4,7 +4,7 @@ Cleartext reference for the “add” workload.
 
 • Reads  datasets    
 • Computes a + b 
-• Writes the result to expected.txt (# add/baseline/expected.txt)
+• Writes the result to expected.txt (# baseline/expected.txt)
 
 Run once whenever you change the dataset.
 """

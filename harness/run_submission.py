@@ -2,7 +2,7 @@
 import subprocess, pathlib, json, shutil, time, sys, os
 
 TASK_DIR = pathlib.Path(__file__).parents[0]          # .../harness
-ROOT     = TASK_DIR.parents[1]                        # repo root
+ROOT     = TASK_DIR.parents[0]                        # repo root
 MEASURE_BIN = ROOT/"measure_io/io_size"
 MEASURE_SRC = ROOT/"measure_io/io_size.cpp"          
 
@@ -14,7 +14,7 @@ if not MEASURE_BIN.exists():
                     "-o", str(MEASURE_BIN), str(MEASURE_SRC)],
                    check=True)
 
-sub_dir  = pathlib.Path(sys.argv[1]).resolve()        # submissions/foo/…
+sub_dir  = pathlib.Path(sys.argv[1]).resolve()
 build_dir= sub_dir/"build"
 
 # 0. wipe IO dir (co-located with workload for isolation)
@@ -33,7 +33,7 @@ lat = (time.perf_counter()-t0)*1e3
 
 # 3. correctness check via verify_result.py
 exp = TASK_DIR.parent/"baseline/expected.txt"
-got = TASK_DIR.parent/"io"/"result.txt"
+got = TASK_DIR.parent/"io/result.txt"
 
 res = subprocess.run(["python3", TASK_DIR/"verify_result.py", exp, got])
 if res.returncode != 0:

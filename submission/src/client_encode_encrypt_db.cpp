@@ -1,4 +1,4 @@
-#include "include/utils.h"
+#include "utils.h"
 
 int main(){
     CryptoContext<DCRTPoly> cc;
@@ -14,10 +14,10 @@ int main(){
     }
 
     double x; 
-    std::ifstream("../io/plain_q.bin",std::ios::binary).read((char*)&x, sizeof(double));
-    std::vector<double> query = {x};
-    auto ptxt = cc->MakeCKKSPackedPlaintext(query);
+    std::ifstream("../io/plain_db.bin",std::ios::binary).read((char*)&x, sizeof(double));
+    std::vector<double> db = {x};
+    auto ptxt = cc->MakeCKKSPackedPlaintext({db});
     auto ctxt = cc->Encrypt(pk, ptxt);
 
-    Serial::SerializeToFile("../io/cipher_q.bin", ctxt, SerType::BINARY);
+    Serial::SerializeToFile("../io/cipher_db.bin", ctxt, SerType::BINARY);
 }

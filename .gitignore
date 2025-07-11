@@ -1,0 +1,7 @@
+# build artefacts
+*/build/
+io/
+third_party/
+.vscode/
+EOF
+git add .gitignore && git commit -m "Add basic .gitignore"
