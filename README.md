@@ -1,11 +1,7 @@
-## Quick start (OpenFHE)
+## Running the "add two numbers" workload
 
 ```console
-git clone https://github.com/your-org/fhe-bench.git
+git clone https://github.com/andreea-alexandru/fhe-bench
 cd fhe-bench
 ./scripts/get-openfhe.sh                     # one-time build
-      submission/your_submission
-# edit *.cpp, params.yml …
-python3 harness/run_submission.py \
-        submission
-# if PASS, push and open PR
+python3 harness/run_submission.py submission
