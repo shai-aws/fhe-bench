@@ -4,7 +4,8 @@ Example – add (OpenFHE, CKKS)
 Edit any of the `client_*` / `server_*` sources in
 `/submissions`
 
-Example of files produced / consumed
+Example of files produced / consumed. 
+client_preprocess and client_decode_decrypt take as argument the test case name.
 -------------------------
 
 | Stage executable                | Reads                               | Writes                     |

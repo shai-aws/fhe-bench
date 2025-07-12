@@ -9,7 +9,7 @@ TASK_DIR="$1"
 BUILD="$TASK_DIR/build"
 NPROC=$(nproc 2>/dev/null || sysctl -n hw.ncpu || echo 4)
 
-"$ROOT/scripts/get-openfhe.sh" >/dev/null
+# "$ROOT/scripts/get-openfhe.sh" >/dev/null
 cmake -S "$TASK_DIR" -B "$BUILD" \
       -DOpenFHE_DIR="$ROOT/third_party/openfhe/lib"
 cd "$TASK_DIR/build"

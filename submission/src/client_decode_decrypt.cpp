@@ -1,6 +1,18 @@
-#include "utils.h"
+#include "openfhe.h"
+// header files needed for de/serialization
+#include "ciphertext-ser.h"
+#include "cryptocontext-ser.h"
+#include "key/key-ser.h"
+#include "scheme/ckksrns/ckksrns-ser.h"
 
-int main(){
+using namespace lbcrypto;
+
+int main(int argc, char* argv[]){
+    if (argc < 2) {
+        std::cerr << "Usage: " << argv[0] << " <test_case>\n";
+        return 1;
+    }
+
     CryptoContext<DCRTPoly> cc;
 
     if (!Serial::DeserializeFromFile("../io/cc.bin", cc,
@@ -22,6 +34,7 @@ int main(){
     double res = ptxt->GetCKKSPackedValue()[0].real();
 
     // No post-processing, so write in the result file.
-    std::ofstream("../io/result.txt") << res << '\n';
+    std::ofstream("../io/result_" + std::string(argv[1]) + ".txt") << res << '\n';
 
+    return 0;
 }

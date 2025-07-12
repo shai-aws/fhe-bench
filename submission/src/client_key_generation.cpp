@@ -1,4 +1,9 @@
-#include "utils.h"
+#include "openfhe.h"
+// header files needed for de/serialization
+#include "ciphertext-ser.h"
+#include "cryptocontext-ser.h"
+#include "key/key-ser.h"
+#include "scheme/ckksrns/ckksrns-ser.h"
 
 using namespace lbcrypto;
 
@@ -28,4 +33,6 @@ int main(){
                                 keys.secretKey, SerType::BINARY)) {
         throw std::runtime_error("Failed to write keys to ../io/");
     }
+
+    return 0;
 }

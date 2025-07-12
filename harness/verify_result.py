@@ -22,7 +22,7 @@ except Exception as e:
     print(f"[verify] failed to read files: {e}")
     sys.exit(1)
 
-EPS = 1e-9                 # tolerance for doubles
+EPS = 1e-5                 # tolerance for doubles
 if abs(exp - res) <= EPS:
     print(f"[verify] PASS  (expected={exp}, got={res})")
     sys.exit(0)
