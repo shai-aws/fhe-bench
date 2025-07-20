@@ -1,3 +1,11 @@
+// client_key_generation.cpp - Client key generation
+//============================================================================
+// Copyright (c) 2025, Amazon Web Services
+// All rights reserved.
+//
+// This software is licensed under the terms of the Apache License v2.
+// See the file LICENSE.md for details.
+//============================================================================
 #include <cassert>
 
 #include "openfhe.h"

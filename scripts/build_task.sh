@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 # ----------------------------------------------------------------------
-# Copyright (c) 2025, Amazon Web Services
-# All rights reserved.
-#
-# This software is licensed under the terms of the Apache License v2.
-# See the file LICENSE.md for details.
-# ----------------------------------------------------------------------
 # Usage: ./scripts/build_task.sh <task>/submission
 # Compiles preprocess/compute/postprocess inside that folder.
 set -euo pipefail

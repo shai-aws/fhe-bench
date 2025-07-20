@@ -1,3 +1,11 @@
+// client_encode_encrypt_db.cpp - encrypting the dataset
+//============================================================================
+// Copyright (c) 2025, Amazon Web Services
+// All rights reserved.
+//
+// This software is licensed under the terms of the Apache License v2.
+// See the file LICENSE.md for details.
+//============================================================================
 #include <cassert>
 
 #include "openfhe.h"

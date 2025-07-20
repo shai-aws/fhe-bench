@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 # ----------------------------------------------------------------------
-# Copyright (c) 2025, Amazon Web Services
-# All rights reserved.
-#
-# This software is licensed under the terms of the Apache License v2.
-# See the file LICENSE.md for details.
-# ----------------------------------------------------------------------
 # Build OpenFHE (CPU backend) at a fixed tag and install to
 #   third_party/openfhe
 # Reruns only if libopenfhe.a is missing.

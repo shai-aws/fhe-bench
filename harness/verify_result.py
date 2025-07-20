@@ -2,6 +2,11 @@
 """
 verify_result.py - correctness oracle for cosine similarity
 """
+# Copyright (c) 2025, Amazon Web Services
+# All rights reserved.
+#
+# This software is licensed under the terms of the Apache v2 License.
+# See the LICENSE.md file for details.
 import sys
 from pathlib import Path
 import numpy as np

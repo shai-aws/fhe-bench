@@ -1,4 +1,4 @@
-// server_encrypted_copmutation.cpp - encrypted fetch-by-similarity
+// server_encrypted_computation.cpp - encrypted fetch-by-similarity
 //============================================================================
 // Copyright (c) 2025, Amazon Web Services
 // All rights reserved.
