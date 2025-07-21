@@ -101,7 +101,6 @@ def main():
     centers.tofile(dataset_dir / "centers.bin")
     payloads.tofile(dataset_dir / "payloads.bin")
 
-    print(f"[baseline]  Generated data for {instance_name(size)} instance")
 
 if __name__ == "__main__":
     main()

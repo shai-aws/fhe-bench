@@ -60,8 +60,6 @@ def main():
     sorted_ps = extracted_payloads[np.lexsort(extracted_payloads.T[::-1])]
     sorted_ps.tofile(dataset_dir/"expected.bin")
 
-    print(f"[baseline]  Wrote {len(sorted_ps)} records to",
-          (dataset_dir/'expected.bin').relative_to(Path.cwd()))
 
 if __name__ == "__main__":
     main()

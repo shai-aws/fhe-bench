@@ -65,9 +65,9 @@ def main():
     # Use params.py to get instance parameters
     params = InstanceParams(size)
 
-    # Check that the current directory has sub-directories 'datasets',
+    # Check that the current directory has sub-directories
     # 'harness', 'scripts', and 'submission'
-    required_dirs = ['datasets', 'harness', 'scripts', 'submission']
+    required_dirs = ['harness', 'scripts', 'submission']
     for dir_name in required_dirs:
         if not (params.rootdir / dir_name).exists():
             print(f"Error: Required directory '{dir_name}'",

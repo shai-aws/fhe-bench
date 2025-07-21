@@ -1,4 +1,4 @@
-## Running the "add two numbers" workload
+## Running the fetch-by-similarity workload
 
 ```console
 git clone <<reposiroty-URL>> <<path>>
@@ -37,40 +37,36 @@ $ python ./harness/run_submission.py 0 --seed 12345 --num_runs 2
 [100%] Built target server_encrypted_compute
 
 [harness] Running submission for toy dataset
-[baseline]  Generated data for toy instance
-18:02:30 [harness] 0: Dataset generation completed
-18:02:30 [harness] 1: Dataset preprocessing completed (elapsed: 0s)
-18:02:33 [harness] 2: Key generation and dataset encryption completed (elapsed: 2s)
+18:49:49 [harness] 0: Dataset generation completed
+18:49:49 [harness] 1: Dataset preprocessing completed (elapsed: 0s)
+18:49:51 [harness] 2: Key generation and dataset encryption completed (elapsed: 1s)
          [harness] Keys directory size: 31M
          [harness] Encrypted data directory size: 92M
-18:02:33 [harness] 3: Encrypted dataset preprocessing completed (elapsed: 0s)
+18:49:51 [harness] 3: Encrypted dataset preprocessing completed (elapsed: 0s)
 
          [harness] Run 1 of 2
-18:02:33 [harness] 4: Query generation completed (elapsed: 0s)
-18:02:33 [harness] 5: Query encryption completed (elapsed: 0s)
-18:02:33 [server] 0: Loading keys completed
-18:02:39 [server] 1: Matrix-vector product completed (elapsed 6s)
-18:02:41 [server] 2: Compare to threshold completed (elapsed 1s)
-18:02:42 [server] 3: Running sums completed
-18:02:45 [server] 4: Output compression completed (elapsed 3s)
-18:02:45 [harness] 6: Encrypted computation completed (elapsed: 12s)
-18:02:45 [harness] 7: Result decryption and postprocessing completed (elapsed: 0s)
-[baseline]  Wrote 13 records to datasets/toy/expected.bin
-[verify] PASS (All 13 payload vectors match)
+18:49:51 [harness] 4: Query generation completed (elapsed: 0s)
+18:49:51 [harness] 5: Query encryption completed (elapsed: 0s)
+18:49:51 [server] 0: Loading keys completed
+18:49:54 [server] 1: Matrix-vector product completed (elapsed 3s)
+18:49:54 [server] 2: Compare to threshold completed
+18:49:55 [server] 3: Running sums completed
+18:49:57 [server] 4: Output compression completed (elapsed 2s)
+18:49:57 [harness] 6: Encrypted computation completed (elapsed: 6s)
+18:49:57 [harness] 7: Result decryption and postprocessing completed (elapsed: 0s)
+         [harness] PASS (All 12 payload vectors match)
 
          [harness] Run 2 of 2
-18:02:46 [harness] 4: Query generation completed (elapsed: 0s)
-18:02:46 [harness] 5: Query encryption completed (elapsed: 0s)
-18:02:46 [server] 0: Loading keys completed
-18:02:51 [server] 1: Matrix-vector product completed (elapsed 4s)
-18:02:52 [server] 2: Compare to threshold completed (elapsed 1s)
-18:02:52 [server] 3: Running sums completed
-18:02:55 [server] 4: Output compression completed (elapsed 2s)
-18:02:55 [harness] 6: Encrypted computation completed (elapsed: 8s)
-18:02:55 [harness] 7: Result decryption and postprocessing completed (elapsed: 0s)
-[baseline]  Wrote 0 records to datasets/toy/expected.bin
-[verify] PASS (All 0 payload vectors match)
+18:49:57 [harness] 4: Query generation completed (elapsed: 0s)
+18:49:57 [harness] 5: Query encryption completed (elapsed: 0s)
+18:49:57 [server] 0: Loading keys completed
+18:50:05 [server] 1: Matrix-vector product completed (elapsed 7s)
+18:50:06 [server] 2: Compare to threshold completed
+18:50:06 [server] 3: Running sums completed
+18:50:08 [server] 4: Output compression completed (elapsed 2s)
+18:50:08 [harness] 6: Encrypted computation completed (elapsed: 10s)
+18:50:08 [harness] 7: Result decryption and postprocessing completed (elapsed: 0s)
+         [harness] PASS (All 0 payload vectors match)
 
 All steps completed for toy dataset!
-```
 ```

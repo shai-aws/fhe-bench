@@ -40,24 +40,24 @@ def main():
 
     # If there are more than 32 expected results, always report success
     if num_expected > 32:
-        print(f"[verify] PASS (Too many matches: {num_expected} > 32,",
+        print(f"         [harness] PASS (Too many matches: {num_expected} > 32,",
               "skipping detailed comparison)")
         sys.exit(0)
 
     # Otherwise, compare the payloads
     if num_expected != num_results:
-        print(f"[verify] FAIL (Expected {num_expected} payloads, got {num_results})")
+        print(f"         [harness] FAIL (Expected {num_expected} payloads, got {num_results})")
         sys.exit(1)
 
     # Compare each payload vector
     for i in range(num_expected):
         if not np.array_equal(expected_payloads[i], result_payloads[i]):
-            print(f"[verify] FAIL (Payload {i} mismatch)")
+            print(f"         [harness] FAIL (Payload {i} mismatch)")
             print(f"  Expected: {expected_payloads[i]}")
             print(f"  Got:      {result_payloads[i]}")
             sys.exit(1)
 
-    print(f"[verify] PASS (All {num_expected} payload vectors match)")
+    print(f"         [harness] PASS (All {num_expected} payload vectors match)")
     sys.exit(0)
 
 
